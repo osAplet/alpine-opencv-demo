@@ -15,3 +15,22 @@ jobs:
         with:
           push: false
           tags: opencv-tester:0.1.0
+ build:
+  název: Prostředí Setup Go
+  použití: actions/setup-go@v5.4.0
+  s:
+    # Verzi Go ke stažení (v případě potřeby) a použití. Podporuje semver spec a rozsahy. Nezapomeňte tuto možnost uzavřít do jednoduchých uvozovek.
+    go-version: # volitelné
+    # Cesta k souboru go.mod nebo go.work.
+    go-version-file: # volitelné
+    # Nastavte tuto možnost na hodnotu true, pokud chcete, aby akce vždy zjišťovala nejnovější dostupnou verzi, která splňuje specifikaci verze
+    check-latest: # volitelné
+    # Používá se k vytažení distribucí Go z go-verzí. Protože existuje výchozí nastavení, uživatel jej obvykle nedodává. Při spuštění této akce na github.com je dostatečná výchozí hodnota. Když běžíte na GHES, můžete předat osobní přístupový token pro github.com, pokud se setkáte s omezením rychlosti.
+    token: # volitelné, výchozí je ${{ github.server_url == 'https://github.com' && github.token || '' }}
+    # Používá se k určení, zda je potřeba ukládání do mezipaměti. Pokud chcete povolit ukládání do mezipaměti, nastavte na hodnotu true.
+    cache: # volitelné, výchozí hodnota je true
+    # Používá se k určení cesty k souboru závislosti - go.sum
+    cache-dependency-path: # volitelné
+    # Cílová architektura pro použití Go. Příklady: x86, x64. Ve výchozím nastavení bude používat architekturu systému.
+    architektura: # volitelná
+           
